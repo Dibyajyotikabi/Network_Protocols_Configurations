@@ -1,3 +1,4 @@
+
 # BGP Configurations
 
 This directory contains BGP configuration examples for different vendors.
@@ -7,3 +8,8 @@ This directory contains BGP configuration examples for different vendors.
 
 ## Juniper
 - [Basic BGP Configuration](./Juniper/bgp_basic_config.txt)
+
+
+## Juniper
+- [Basic BGP Configuration](./Juniper/bgp_basic_config.txt)
+
