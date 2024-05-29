@@ -1,2 +1,2 @@
-# Network_Protocols_Configurations
+# Network Protocols Configurations
 Basic knowledge and configurations of BGP, EIGRP, VPN, VLANs
