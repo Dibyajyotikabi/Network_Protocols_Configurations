@@ -7,3 +7,4 @@ This directory contains VPN configuration examples for different vendors.
 
 ## Juniper
 - [Basic VPN Configuration](./Juniper/vpn_basic_config.txt)
+

@@ -1,0 +1,15 @@
+! Basic VLAN Configuration for Cisco
+vlan 10
+ name Sales
+!
+vlan 20
+ name Marketing
+!
+interface GigabitEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+!
+interface GigabitEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+
