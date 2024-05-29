@@ -1,0 +1,4 @@
+! Basic BGP Configuration for Cisco
+router bgp 65001
+ neighbor 192.168.1.1 remote-as 65002
+ network 10.0.0.0 mask 255.255.255.0
