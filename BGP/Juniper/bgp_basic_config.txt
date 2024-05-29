@@ -1,0 +1,12 @@
+# Basic BGP Configuration for Juniper
+protocols {
+    bgp {
+        group external {
+            type external;
+            peer-as 65002;
+            neighbor 192.168.1.1;
+        }
+        export export-routes;
+    }
+}
+

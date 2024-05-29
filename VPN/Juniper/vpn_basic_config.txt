@@ -1,0 +1,47 @@
+# Basic VPN Configuration for Juniper
+security {
+    ike {
+        proposal ike-prop {
+            authentication-method pre-shared-keys;
+            dh-group group2;
+            authentication-algorithm sha1;
+            encryption-algorithm aes-128-cbc;
+            lifetime-seconds 86400;
+        }
+        policy ike-policy {
+            mode main;
+            proposals ike-prop;
+        }
+        gateway ike-gate {
+            ike-policy ike-policy;
+            address 192.168.1.1;
+            external-interface ge-0/0/0.0;
+        }
+    }
+    ipsec {
+        proposal ipsec-prop {
+            protocol esp;
+            authentication-algorithm hmac-sha1-96;
+            encryption-algorithm aes-128-cbc;
+        }
+        policy ipsec-policy {
+            perfect-forward-secrecy {
+                keys group2;
+            }
+            proposals ipsec-prop;
+        }
+        vpn ipsec-vpn {
+            bind-interface st0.0;
+            ike {
+                gateway ike-gate;
+                proxy-identity {
+                    local 10.0.0.0/24;
+                    remote 10.0.1.0/24;
+                    service any;
+                }
+            }
+            ipsec-policy ipsec-policy;
+        }
+    }
+}
+

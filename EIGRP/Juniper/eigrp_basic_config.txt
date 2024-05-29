@@ -1,0 +1,10 @@
+# Basic EIGRP Configuration for Juniper
+protocols {
+    eigrp {
+        autonomous-system 1 {
+            interface ge-0/0/0.0;
+            interface ge-0/0/1.0;
+        }
+    }
+}
+
